@@ -32,7 +32,7 @@ export class CreateTableUsers1623716226741 implements MigrationInterface {
           {
             name: "level",
             type: "varchar",
-            default: "cliente",
+            default: "Cliente",
             isNullable: false,
             comment: "Admin | Cliente",
           },

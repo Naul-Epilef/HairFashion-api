@@ -4,6 +4,6 @@ import userRoutes from "./users.routes";
 
 const routes = express();
 
-routes.use(userRoutes);
+routes.use("/users", userRoutes);
 
 export default routes;

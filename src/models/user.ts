@@ -20,6 +20,9 @@ export default class users {
   @Column()
   pass: string;
 
+  @Column()
+  level: string;
+
   @CreateDateColumn()
   created_at: Date;
 

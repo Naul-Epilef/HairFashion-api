@@ -30,6 +30,13 @@ export class CreateTableUsers1623716226741 implements MigrationInterface {
             isNullable: false,
           },
           {
+            name: "level",
+            type: "varchar",
+            default: "cliente",
+            isNullable: false,
+            comment: "Admin | Cliente",
+          },
+          {
             name: "created_at",
             type: "timestamp",
           },
@@ -38,7 +45,8 @@ export class CreateTableUsers1623716226741 implements MigrationInterface {
             type: "timestamp",
           },
         ],
-      })
+      }),
+      true
     );
   }
 

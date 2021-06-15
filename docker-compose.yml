@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  db:
+    image: mariadb:10.4
+    container_name: hairfashion_db
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      - MARIADB_DATABASE=hairfashion
+      - MARIADB_ROOT_PASSWORD=root

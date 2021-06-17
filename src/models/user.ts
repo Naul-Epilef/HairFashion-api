@@ -20,7 +20,7 @@ export default class users {
   @Column()
   pass: string;
 
-  @Column({ default: "Cliente", comment: "Admin | Cliente" })
+  @Column({ default: "'Cliente'", comment: "Admin | Cliente" })
   level: string;
 
   @CreateDateColumn()

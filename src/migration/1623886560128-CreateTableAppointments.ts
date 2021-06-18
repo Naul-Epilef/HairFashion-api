@@ -12,11 +12,15 @@ export class CreateTableAppointments1623886560128
             columnNames: ["providers_id"],
             referencedColumnNames: ["id"],
             referencedTableName: "providers",
+            onDelete: "NO ACTION",
+            onUpdate: "NO ACTION",
           },
           {
             columnNames: ["clients_id"],
             referencedColumnNames: ["id"],
             referencedTableName: "clients",
+            onDelete: "NO ACTION",
+            onUpdate: "NO ACTION",
           },
         ],
         columns: [

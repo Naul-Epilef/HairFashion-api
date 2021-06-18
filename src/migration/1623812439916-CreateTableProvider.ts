@@ -10,6 +10,8 @@ export class CreateTableProvider1623812439916 implements MigrationInterface {
             columnNames: ["users_id"],
             referencedColumnNames: ["id"],
             referencedTableName: "users",
+            onDelete: "NO ACTION",
+            onUpdate: "NO ACTION",
           },
         ],
         columns: [

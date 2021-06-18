@@ -34,7 +34,7 @@ export class CreateTableUsers1623716226741 implements MigrationInterface {
             type: "varchar",
             default: "'Cliente'",
             isNullable: false,
-            comment: "Admin | Cliente",
+            comment: "Esteticista | Cliente",
           },
           {
             name: "created_at",

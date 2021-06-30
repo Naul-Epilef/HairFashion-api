@@ -7,7 +7,7 @@ export class CreateTableProvider1623812439916 implements MigrationInterface {
         name: "providers",
         foreignKeys: [
           {
-            columnNames: ["users_id"],
+            columnNames: ["user"],
             referencedColumnNames: ["id"],
             referencedTableName: "users",
             onDelete: "NO ACTION",
@@ -22,7 +22,7 @@ export class CreateTableProvider1623812439916 implements MigrationInterface {
             generationStrategy: "uuid",
           },
           {
-            name: "users_id",
+            name: "user",
             type: "varchar",
             isNullable: false,
             isUnique: true,

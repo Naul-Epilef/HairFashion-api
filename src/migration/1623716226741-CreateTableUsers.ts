@@ -37,11 +37,16 @@ export class CreateTableUsers1623716226741 implements MigrationInterface {
             comment: "Esteticista | Cliente",
           },
           {
-            name: "created_at",
+            name: "deleted",
+            type: "boolean",
+            default: false,
+          },
+          {
+            name: "createdAt",
             type: "timestamp",
           },
           {
-            name: "upadted_at",
+            name: "updatedAt",
             type: "timestamp",
           },
         ],

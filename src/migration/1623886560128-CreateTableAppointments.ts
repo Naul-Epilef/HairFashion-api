@@ -9,16 +9,16 @@ export class CreateTableAppointments1623886560128
         name: "appointments",
         foreignKeys: [
           {
-            columnNames: ["providers_id"],
+            columnNames: ["client"],
             referencedColumnNames: ["id"],
-            referencedTableName: "providers",
+            referencedTableName: "clients",
             onDelete: "NO ACTION",
             onUpdate: "NO ACTION",
           },
           {
-            columnNames: ["clients_id"],
+            columnNames: ["provider"],
             referencedColumnNames: ["id"],
-            referencedTableName: "clients",
+            referencedTableName: "providers",
             onDelete: "NO ACTION",
             onUpdate: "NO ACTION",
           },
@@ -32,26 +32,26 @@ export class CreateTableAppointments1623886560128
           },
           {
             name: "date",
-            type: "varchar",
-            isNullable: false,
-          },
-          {
-            name: "clients_id",
-            type: "varchar",
-            isNullable: false,
-          },
-          {
-            name: "providers_id",
-            type: "varchar",
-            isNullable: false,
-          },
-          {
-            name: "canceled_at",
             type: "datetime",
             isNullable: false,
           },
           {
-            name: "created_at",
+            name: "client",
+            type: "varchar",
+            isNullable: false,
+          },
+          {
+            name: "provider",
+            type: "varchar",
+            isNullable: false,
+          },
+          {
+            name: "canceled",
+            type: "boolean",
+            default: false,
+          },
+          {
+            name: "createdAt",
             type: "datetime",
             isNullable: false,
           },

@@ -7,7 +7,7 @@ export class CreateTableClients1623885212413 implements MigrationInterface {
         name: "clients",
         foreignKeys: [
           {
-            columnNames: ["users_id"],
+            columnNames: ["user"],
             referencedColumnNames: ["id"],
             referencedTableName: "users",
             onDelete: "NO ACTION",
@@ -22,7 +22,7 @@ export class CreateTableClients1623885212413 implements MigrationInterface {
             generationStrategy: "uuid",
           },
           {
-            name: "users_id",
+            name: "user",
             type: "varchar",
             isNullable: false,
             isUnique: true,

@@ -1,4 +1,10 @@
-import { Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  JoinColumn,
+  Column,
+} from "typeorm";
 
 import User from "./user";
 
@@ -9,5 +15,5 @@ export default class clients {
 
   @OneToOne(() => User)
   @JoinColumn()
-  users_id: string;
+  user: User;
 }

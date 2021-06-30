@@ -1,13 +1,13 @@
 import {
-  Column,
-  CreateDateColumn,
   Entity,
-  ManyToOne,
   PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  CreateDateColumn,
 } from "typeorm";
 
-import Client from "./clients";
-import Provider from "./providers";
+import Client from "./client";
+import Provider from "./provider";
 
 @Entity("appointments")
 export default class appointments {
@@ -18,14 +18,14 @@ export default class appointments {
   date: Date;
 
   @ManyToOne(() => Client, (client) => client.id)
-  users_id: string;
+  client: Client;
 
   @ManyToOne(() => Provider, (provider) => provider.id)
-  providers_id: string;
+  provider: Provider;
 
-  @Column()
-  canceled_at: Date;
+  @Column({ default: false })
+  canceled: boolean;
 
   @CreateDateColumn()
-  created_at: Date;
+  createdAt: Date;
 }

@@ -1,20 +1,20 @@
-import { getRepository } from "typeorm";
 import { v4 } from "uuid";
 
 import User from "../../models/user";
+import UserRepository from "../../repositories/User";
 
 interface Request {
   name: string;
   email: string;
   pass: string;
-  level?: string;
+  level: string;
 }
 
 export default class CreateUser {
   public async exec({ name, email, pass, level }: Request): Promise<User> {
-    const userReposiroty = getRepository(User);
+    const userRepository = new UserRepository().exec();
 
-    const newUser = userReposiroty.create({
+    const newUser = userRepository.create({
       id: v4(),
       name,
       email,
@@ -22,7 +22,7 @@ export default class CreateUser {
       level,
     });
 
-    userReposiroty.save(newUser);
+    await userRepository.save(newUser);
 
     return newUser;
   }
